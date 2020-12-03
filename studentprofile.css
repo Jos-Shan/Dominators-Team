@@ -1,0 +1,49 @@
+body {
+    background-color:rgb(255, 174, 0);
+}
+
+.mainBox {
+    width: 1200px;
+    height: 800px;
+    padding: 50px;
+    margin: 0 auto;
+}
+.detail-card {
+    background-color: white;
+    background-position: center;
+    height: 100%;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.cardHead a {
+    background:#52c2c8;
+    float: right;
+    margin-left: 50px;
+}
+
+.detail-list {
+    padding: 30px;
+    text-align: center;
+}
+
+.detail-list h3 {
+    color:rgba(24, 72, 87, 1) ;
+    font-family: "Robboto", sans-serif;
+    font-weight: bold;
+}
+.detail-list a {
+    background:#52c2c8;
+    margin-left: 10px;
+}
+
+.profile {
+padding: 30px;
+text-align: center;
+}
+
+.profile input {
+    padding-left: 30px;
+    float: left;
+    margin-left: 30px;
+}

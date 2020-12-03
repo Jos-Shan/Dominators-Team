@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="one">
+    <div class="con">
+        <a href="#">APPLICATIONS</a>
+        <a href="#">STUDENT LIST</a>
+        <a href="#">STUDENT PROGRESS</a>
+        <a href="connect.html">CONNECTION</a>
+        <a href="#">STATISTICS</a>
+        <a href="#">LOGOUT</a>
+         </div>
+      <div class="two">
+        <img src="code queen.png">
+          <h2>REGISTER STUDENT</h2>
+      </div>
+      <div class="reg-bg">
+        <form id="registration" method="get" action="register.html">   
+            <label><b>First name:</b> </label>   
+            <input type="text" name="Fname" id="fname">    
+            <br><br>  
+            <label><b>Last name:</b> </label>   
+            <input type="text" name="Lname" id="lname">    
+            <br><br>
+            <label><b>Email:</b></label>   
+            <input type="text" name="Email" id="email">    
+            <br><br>      
+            <label><b>Phone number: </b> </label>   
+            <input type="text" name="Phone number" id="phone">    
+            <br><br>
+             <label><b>Admission status:</b></label>   
+            <select name="Admission status" id="status">
+              <option value="Applied">Applied</option>
+              <option value="Interviewed">Interviewed</option>
+              <option value="Accepted">Accepted</option>
+            </select>  
+            <br><br>
+            <label><b>Facilitator:</b> </label>   
+            <input type="text" name="Facilitator" id="facilitator">    
+            <br><br>   
+            <input type="button" name="apply" id="apply" value="SUBMIT">       
+            <br><br>
+            </form>
+      </div>
+  </div>
+  <p></p>  
+</body>
+</html>

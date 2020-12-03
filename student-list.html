@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Student List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="studentlist.css">
+</head>
+<body>
+    <div class="marginBox">
+      <div class="on-board-form">
+        <img src="./code queen.png" alt="Code Queen logo" style="padding: 10px;width: 150px; height: 100px;">
+
+        <a href="../homepage/homepage.html" class="btn btn-secondary" role="button"> Log out</a>
+        <a href="../statistics/statistics.html" class="btn btn-secondary"> Statistics</a>
+        <a href="../connect/connect.html" class="btn btn-secondary" role="button"> Connect</a>
+        <a href="../regform/regform.html" class="btn btn-secondary" role="button"> Register Student</a>
+        <a href="../studentprogress/studentprogress.html" class="btn btn-secondary"> Student Progress </a>
+        
+        <div class="table-details">
+          <div class="table-title"><h3 class="title">Student List Overview</h3></div> <br>
+
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+            <table class="table" id="mytable">
+                <thead class="tableHead">
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Student name</th>
+                    <th scope="col">Cohort</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Student details</th>
+                  </tr>
+                </thead>
+                <tbody class="tableRows">
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mwiza Price</td>
+                    <td>Cohort 1</td>
+                    <td>Graduated</td>
+                    <td>
+                      <a href="../studentprofile/studentprofile.html" class="btn btn-secondary" role="button"> View Profile</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Nakimuli Grace</td>
+                    <td>Cohort 2</td>
+                    <td>Graduated</td>
+                    <td>
+                      <a href="../studentprofile/studentprofile.html" class="btn btn-secondary" role="button"> View Profile</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Apio Joy</td>
+                    <td>Cohort 3</td>
+                    <td>Training</td>
+                    <td>
+                      <a href="../studentprofile/studentprofile.html" class="btn btn-secondary" role="button"> View Profile</a>
+                    </td>
+                 <tr>
+                    <th scope="row">4</th>
+                    <td>Lumala Peace</td>
+                    <td>Cohort 1</td>
+                    <td>Graduated</td>
+                    <td>
+                      <a href="../studentprofile/studentprofile.html" class="btn btn-secondary" role="button"> View Profile</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </table>
+        </div>
+      </div>
+    </div> 
+    <script>
+      function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+      
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+      </script>
+</body>
+</html>
+
