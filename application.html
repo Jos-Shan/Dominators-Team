@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications</title>
+    <link rel="stylesheet" href="application.css">
+</head>
+<body>
+    <div class="container">
+       <div class="info">
+          <img src="./CodeQueen logo.jpeg" alt="logo" style="padding: 10px;width: 150px; height: 100px;">
+
+          <h1 style="text-align:center; color: black;">CODE QUEEN BOOTCAMP APPLICATIONS LIST</h1>
+          <p>Application <a href="https://docs.google.com/forms/d/e/1FAIpQLSejaBQzQZeQvww2zBFaNq-U5KjAFKLcHbA_MXwbtZmMmZ9r7w/viewform" >form</a> for Code Queen bootcamp. </p>
+
+           <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+                <div class="details">
+                    <table id="myTable">
+                        <tr class="header">
+                            <th>Name</th>
+                            <th>Year</th>
+                            <th>Email</th>
+                            <th>Phone number</th>
+                            <th>Age</th>
+                            <th>City</th>
+                            <th>Level of education</th>
+                            <th>Status</th>
+                            <th>Occupation</th>
+                        </tr>
+                        <tr>
+                            <td>Alfred</td>
+                            <td>2019</td>
+                            <td>alfred@gmail.com</td>
+                            <td>0772816734</td>
+                            <td>29</td>
+                            <td>Kampala</td>
+                            <td>Degree</td>
+                            <td>single</td>
+                            <td>Teacher</td>
+                        </tr>
+                        <tr>
+                            <td>Belinda</td>
+                            <td>2019</td>
+                            <td>alfred@gmail.com</td>
+                            <td>0772895734</td>
+                            <td>35</td>
+                            <td>Lira</td>
+                            <td>Certificate</td>
+                            <td>married</td>
+                            <td>Stay home mother</td>
+                        </tr>
+                        <tr>
+                            <td>Israel</td>
+                            <td>2020</td>
+                            <td>isreal@gmail.com</td>
+                            <td>0773716734</td>
+                            <td>20</td>
+                            <td>Kampala</td>
+                            <td>UACE</td>
+                            <td>single</td>
+                            <td>Unemployed</td>
+                        </tr>
+                        <tr>
+                            <td>Edith</td>
+                            <td>2020</td>
+                            <td>edith@gmail.com</td>
+                            <td>0772816834</td>
+                            <td>30</td>
+                            <td>Wakiso</td>
+                            <td>Degree</td>
+                            <td>single</td>
+                            <td>Nurse</td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+    </div>
+<script>
+    function myFunction() {
+      
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+    
+      
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Dashboard </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./dash.css">
+    </head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <body>
+  <div class="container-fluid">
+  <div class="big1">
+  <div class="big2">
+  <div class="header">
+    <div class="logo"><div>
+        <img src="./CodeQueen logo.jpeg" alt="logo" style="padding: 10px;width: 200px; height: 120px;">
+
+    </div>  
+    <div class="logoutBtn">
+      <a href="../loginPage/login.html" class="btn btn-secondary" role="button"> Logout </a>
+    </div>
+  </div>
+  <div class="side1">
+    <a href="#" class="btn btn-secondary btn-round" role="button"> Code Queen Performance </a><br><br>
+    <a href="#" class="btn btn-secondary btn-round" role="button"> Student Performance </a><br><br>
+    <a href="#" class="btn btn-secondary btn-round" role="button"> Totals </a><br><br>
+    <button type="button" class="btn btn-secondary btn-round">Download Reports</button>
+    
+  </div>
+  </div>
+  <div class="side2">
+    <div id="barchart_material" style="width: 600px; height: 300px;"></div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Cohort','Graduated', 'Dropped-off', 'Applied','Interviewed', 'Accepted'],
+          ['Cohort 1', 25, 10, 50, 40, 35],
+          ['Cohort 2', 20, 8, 40, 35, 28],
+          ['Cohort 3', 15, 5, 30, 24, 20],
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Code Queen Performance',
+          },
+          bars: 'horizontal' 
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </div>
+</div>
+</div>
+
+  </body>
+</html>

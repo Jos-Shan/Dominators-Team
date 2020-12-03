@@ -1,0 +1,61 @@
+body{
+    background-image: url("logo.jpg");
+    height: 100 vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 1200px;
+    height: 800px;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.info{
+    background-color: rgb(255, 174, 0);
+    height: 100%;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.table-details{
+    width: 1000px;
+    height: 450px;
+    background-color:darkgray;
+    border-radius: 20px;
+    margin: 25px;
+}
+
+#myInput {
+    background-image: url(''); 
+    background-position: 10px 12px; 
+    background-repeat: no-repeat; 
+    width: 50%; 
+    font-size: 16px; 
+    padding: 12px 20px 12px 40px; 
+    border: 1px solid #ddd;
+    margin-bottom: 15px; 
+}
+  
+  #myTable {
+    border-collapse: collapse; 
+    width: 100%; 
+    border: 1px solid black; 
+    font-size: 18px;
+  }
+  
+  #myTable th, #myTable td {
+    text-align: left; 
+    padding: 12px; 
+  }
+  
+  #myTable tr {
+    border-bottom: 2px solid #ddd;
+  }
+  
+  #myTable tr.header, #myTable tr:hover {
+    background-color: #f1f1f1;
+  }

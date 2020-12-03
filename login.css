@@ -1,0 +1,31 @@
+body {
+    background-image: url("logo.jpg");
+    height: 100 vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+}
+
+.container {
+    width:100px;
+    padding:60%;
+    margin: auto;
+}
+
+.logo {
+width: 400px;
+margin: 0 auto;
+}
+
+.loginBox {
+    background-color: rgb(255, 174, 0);
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.loginBox button {
+    background-color:darkgray;
+}
