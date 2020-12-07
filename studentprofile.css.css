@@ -1,0 +1,30 @@
+
+.box {
+    width: 80%;
+    height: 600px;
+    display: inline-block;
+    margin: 50px 10%;
+    box-shadow: 0 27px 87px rgb(255, 174, 0);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.box-img {
+    float: left;
+    width: 45%;
+}
+
+.box-text {
+    width: 55%;
+    float: right;
+    padding-left: 35px;
+}
+
+.box-text a {
+    background:darkgray;
+    margin-left: 10px;
+}
+
+button {
+    text-align: right;
+}

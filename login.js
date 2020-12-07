@@ -1,4 +1,4 @@
-const login_url= 'http://localhost:4000/users/login';
+const login_url= 'http://localhost:3000/users/login';
 const loginBtn = document.getElementById("loginBtn");
 
 	loginBtn.addEventListener("click",(event) =>{
@@ -28,6 +28,17 @@ const loginBtn = document.getElementById("loginBtn");
 				console.log(error)
 			})
 		
+		});
+
+		router.post('/', function (req, res, next)  {
+			var loginData = req.body
+			console.log("Data>>>>>",loginData)
+			if(loginData.role==='Student'){
+				res.render('studentprofile', loginData);
+			}else if(loginData.role==='Staff/Facilitator'){
+				res.render('progess', loginData);
+			}
+			res.render('index', loginData);
 		});
 
    

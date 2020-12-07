@@ -88,6 +88,10 @@ h2, label{
         border: 1px solid  #f3ac3a;
       
     }
+    input{
+        padding-left:30px;
+        margin-top:5px;
+    }
     h2{
         padding-top: 60px;
         color:#231f20;
